@@ -4,7 +4,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { AiFillMessage } from "react-icons/ai";
 import { useForm } from "react-hook-form";
-import "./main.css"; // custom styles
+import "./main.css"; 
 
 const Contact = () => {
   const {
@@ -14,10 +14,10 @@ const Contact = () => {
     formState: { errors, isSubmitSuccessful },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Form submitted:", data);
-    reset();
-  };
+  //  const onSubmit = () => {
+  //   // Submit the form manually after validation
+  //   document.forms[0].submit();
+  // };
 
   return (
     <div className="outer-container contact-box">
@@ -53,7 +53,9 @@ const Contact = () => {
         )}
 
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          action="https://formsubmit.co/gsneha2319@gmail.com"
+          method="POST"
+          onSubmit={handleSubmit(() => document.forms[0].submit())}
           className="form-container flex-col"
         >
           <div className="form-group">
