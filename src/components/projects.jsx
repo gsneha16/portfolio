@@ -11,6 +11,15 @@ const projects = [
     code: "https://github.com/gsneha16/Veggie-Vibe-MERN-PROJECT",
   },
   {
+    title: "WebChat",
+    image: "/webchat.png",
+    description:
+      "WebChat is a real-time chat app with one-to-one messaging, chat history, and a clean UI using MERN stack and Socket.IO.",
+    tech: "MERN",
+    live: "https://veggie-vibe-ui.vercel.app/",
+    code: "https://github.com/gsneha16/webChat",
+  },
+  {
     title: "PrivaCoder",
     image: "/PrivaCoder-1.png",
     description:
@@ -38,26 +47,22 @@ const ProjectCard = () => {
         {projects.map((project, index) => {
           return (
             <div className="project-card" key={index}>
-              <img src={project.image} alt={project.title} className="project-image" />
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+              />
               <div className="project-content">
                 <h3 className="gradient-text-sm">{project.title}</h3>
                 <p>{project.description}</p>
                 <p>
-                  <strong>Tech Stack: {project.tech}</strong> 
+                  <strong>Tech Stack: {project.tech}</strong>
                 </p>
                 <div className="project-links">
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href={project.live} target="_blank" rel="noreferrer">
                     Live
                   </a>
-                  <a
-                    href={project.code}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href={project.code} target="_blank" rel="noreferrer">
                     Code
                   </a>
                 </div>
