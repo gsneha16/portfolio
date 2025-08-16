@@ -38,14 +38,14 @@ const Contact = () => {
             </a>
           </li>
           <li className="icons">
-            <a href="/">
+            <a href="mailto:gsneha2319@gmail.com">
               <CgMail />
             </a>
           </li>
         </ul>
       </div>
 
-      <div className="contact-form">
+      {/* <div className="contact-form">
         <h2 className="contact-title gradient-text-sm">Contact Form</h2>
 
         {isSubmitSuccessful && (
@@ -100,7 +100,7 @@ const Contact = () => {
             Send
           </button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };
